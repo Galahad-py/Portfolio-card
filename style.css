@@ -1,0 +1,386 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    background-color: aliceblue;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #111111;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    height: 500px;
+    width: 700px
+}
+
+.info-card-first-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #767676; 
+}
+
+.first-section-left-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .gradient-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background-image: url('icons/pawel-czerwinski-JG2DaZZzvzk-unsplash.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+  .main-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite; 
+  }
+  .orbit-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #656565be; 
+  }
+
+  .orbit-circle.small {
+    width: 8px;
+    height: 8px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .orbit-circle.medium {
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+  }
+
+  .orbit-circle.large {
+    width: 15px;
+    height: 15px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.Q-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Q-header h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.treasury-info {
+    display: flex;
+    gap: 20px;
+    font-size: 11px;
+    font-family: 'Fira Mono', monospace;
+    color: #9b9b9b;
+}
+
+.first-section-right-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;;
+    font-family: 'Fira Mono', monospace;
+    color: #9b9b9b;
+}
+
+.first-section-right-header h3 {
+    font-size: 14px;
+}
+
+.star {
+    font-size: 20px;
+}
+
+.info-card-second-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #767676; 
+}
+
+.info-card-second-section h4 {
+    font-family: 'Fira Mono', monospace;
+    color: #9b9b9b;
+    font-size: 13px;
+}
+
+.info-card-second-section p {
+    letter-spacing: 1px;
+}
+
+.performance-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a85a;
+}
+
+.performance-img img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.info-card-third-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #767676; 
+}
+
+.info-card-third-section h4 {
+    font-family: 'Fira Mono', monospace;
+    color: #9b9b9b;
+    font-size: 13px;
+}
+
+.info-card-fourth-section {
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Fira Mono', monospace;
+}
+
+
+.info-card-fourth-section h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  font-size: 13px;
+}
+
+.tvl-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0073ff;
+}
+
+.tvl-span {
+  color: #0073ff;
+}
+
+
+
+.apy-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: violet;
+}
+
+.apy-span {
+  color: violet;;
+}
+
+.reserves-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.reserves-span {
+  color: green;
+}
+
+
+
+
+
+
+
+
+.label {
+    font-size: 14px;
+    color: #9b9b9b77;
+    font-family: 'Fira Mono', monospace;
+    margin-right: 10px; 
+  }
+
+.dashed-line {
+    flex-grow: 1; 
+    border-top: 2px dashed #9b9b9b6f; 
+    height: 0;
+  }
+
+.dashed-line-container {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box;
+  }
+
+.deposit-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #111111;
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    height: 500px;
+}
+
+.deposits, .locking-period, .pending-rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.deposit-btn, .claim-btn, .withdraw-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 14px;
+    font-size: 13px;
+    color: #e7e7e7;
+    font-weight: 600;
+}
+
+.deposit-btn {
+    background-color: #0073ff;
+    border: none;
+}
+
+.claim-btn {
+    background-color: transparent;
+    border: 2px solid #0073ff;
+}
+
+.withdraw-btn {
+    background-color: transparent;
+    border: 2px solid #88888871;
+    margin-bottom: 0;
+}
+
+.deposit-btn img, .claim-btn img, .withdraw-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.deposits h4, .locking-period h4, .pending-rewards h4 {
+    font-family: 'Fira Mono', monospace;
+    color: #9b9b9b;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.deposits h3, .locking-period h3, .pending-rewards h3 {
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.deposits p {
+    font-size: 14px;
+}
+
+.deposits span {
+    color: #9b9b9b; 
+}
+
+.pending-rewards h3 {
+    color: orange;
+}
